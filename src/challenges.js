@@ -13,27 +13,31 @@ function calcArea(base, height) {
   return area;
 };
 
-
-
-
-
 // Desafio 3
 function splitSentence(string) {
   let separador = string.split(' ')
   return separador;
 }
 
-
-
-
-
-
-
-
 // Desafio 4
-function concatName() {
-  // seu código aqui
+function concatName(arrayStrings) {
+  let primeiraString = arrayStrings[0];
+  let ultimaString = arrayStrings[arrayStrings.length-1];
+  let primeiraUltima = ultimaString + ' ' + primeiraString;
+  return primeiraUltima;
 }
+
+
+
+
+
+
+
+
+
+
+
+
 
 // Desafio 5
 function footballPoints() {
