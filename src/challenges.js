@@ -53,17 +53,20 @@ function highestCount(array) {
   return contador;
 }
 
-
-
-
-
-
-
-
-
 // Desafio 7
-function catAndMouse() {
-  // seu código aqui
+function catAndMouse(mouse,cat1,cat2) {
+//Para resolver esse teste busquei na internet e encontrei o site: https://ichi.pro/pt/algoritmo-javascript-gatos-e-um-rato-278592971346362 nesse site utilizei as 2 primeiras linhas, utilizando o comando Math.abs() que eu não conhecia ainda, e que retorna um valor absoluto, ou seja retorna positivo no lugar de negativo.
+
+  let gato1 = Math.abs(mouse - cat1);
+  let gato2 = Math.abs(mouse - cat2);
+  
+  if(gato1 < gato2){
+    return 'cat1'
+  }else if(gato1 > gato2){
+    return 'cat2'
+  } else{
+    return 'os gatos trombam e o rato foge'
+  }
 }
 
 // Desafio 8
