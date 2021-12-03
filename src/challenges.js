@@ -31,25 +31,35 @@ function concatName(arrayStrings) {
 function footballPoints(wins,ties) {
   let vitoria = wins * 3;
   let empate =  ties * 1;
-  return vitoria+empate; 
+  return vitoria + empate;
 }
-
-
-
-
-
-
-
-
-
-
-
-
 
 // Desafio 6
-function highestCount() {
-  // seu código aqui
+function highestCount(array) {
+  let valorMaior = array[0];
+  let contador = 0;
+
+  for(let i = 0; i < array.length; i+=1){
+    if(array[i] > valorMaior){
+      valorMaior = array[i];
+    } 
+  }
+
+  for(let c = 0; c < array.length; c+=1){
+     if(valorMaior === array[c]){
+       contador = contador+1;
+     }
+  }
+  return contador;
 }
+
+
+
+
+
+
+
+
 
 // Desafio 7
 function catAndMouse() {
