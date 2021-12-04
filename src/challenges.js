@@ -35,6 +35,7 @@ function footballPoints(wins,ties) {
 }
 
 // Desafio 6
+//Consegui esse desafio com a ajuda da Sheila durante grupo de estudos de madrugada.
 function highestCount(array) {
   let valorMaior = array[0];
   let contador = 0;
@@ -88,18 +89,49 @@ function fizzBuzz(array) {
   
   return string;    
 };
-console.log(fizzBuzz([2, 15, 7, 9, 45]))
-
-
-
-
 
 // Desafio 9
-function encode() {
-  // seu código aqui
+//Este desafio recebi ajuda do Victor Tavares na lógica do grupo de sábado a tarde.
+function encode(criptografia) {
+  let codigo = '';
+  for(let i = 0; i < criptografia.length; i+=1){
+    if(criptografia[i] == 'a'){
+      codigo += 1; 
+    }else if(criptografia[i] == 'e'){
+      codigo += 2;
+    }else if(criptografia[i] == 'i'){
+      codigo += 3;
+    } else if(criptografia[i] == 'o'){
+      codigo += 4;
+    } else if(criptografia[i] == 'u'){
+      codigo += 5;
+    }else{
+      codigo += criptografia[i];
+    }
+  }
+  return codigo;
 }
-function decode() {
+
+
+function decode(codigo) {
   // seu código aqui
+  let codigoRevelado = '';
+  for(let c = 0; c < codigo.length; c+=1){
+    if(codigo[c] == 1){
+      codigoRevelado += 'a'; 
+    }else if(codigo[c] == 2){
+      codigoRevelado += 'e';
+    }else if(codigo[c] == 3){
+      codigoRevelado += 'i';
+    } else if(codigo[c] == 4){
+      codigoRevelado += 'o';
+    } else if(codigo[c] == 5){
+      codigoRevelado += 'u';
+    }else{
+      codigoRevelado += codigo[c];
+    }
+  }
+  return codigoRevelado;
 }
 
 module.exports = {
