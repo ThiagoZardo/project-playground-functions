@@ -74,9 +74,30 @@ function triangleCheck(lineA, lineB, lineC) {
 
 
 // Desafio 13
-function hydrate() {
-  // seu código aqui
+ //Consegui resolver esse requisito com a ajuda de um tutorial no youtube e da documentação no w3scholl sobre o método replace.
+  // A expressão /\D/ localiza tudo o que não é número e substitui por '' O gi é global e o i é para caracteres maiusculos e minusculos.
+  //links utilizados:
+  //Youtube: https://www.youtube.com/watch?v=id2tW0y7mpY
+  //W3School: https://www.w3schools.com/jsref/jsref_replace.asp
+function hydrate(string) {
+ 
+  let valorRecebido = string.replace(/\D/gi,'');
+  let guardaValor = 0;
+  let singular = " copo de água"
+  let plural = " copos de água"
+
+  for(let i = 0; i < valorRecebido.length; i+=1){
+    guardaValor += parseInt(valorRecebido[i]);
+  }
+  
+  if(guardaValor <= 1){
+    return guardaValor + singular;
+  }else{
+    return guardaValor + plural;
+  }
+  
 }
+console.log(hydrate("1 cachaça, 5 cervejas e 1 copo de vinho"));
 
 module.exports = {
   generatePhoneNumber,
